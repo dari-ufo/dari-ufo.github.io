@@ -61,7 +61,16 @@
 
       var swalo = Swal.mixin({ allowOutsideClick: false, reverseButtons: true });
       async function kirimPesan() {
-        location.assign("https://www.instagram.com/zayn_avkn21/")
+        klikA.play();
+        var { value: pesan } = await swalo.fire({ title: "Tulis pesan", input: "textarea", confirmButtonText: "Kirim" });
+        klikA.play();
+        if (pesan) {
+          await swalo.fire({ title: "Kirim pesannya ke wa aku ya" });
+          location.assign(`https://wa.me/${089648500598}?text=${pesan}`);
+        } else {
+          await swalo.fire({ title: "Jangan dikosongin ya 😆" });
+          kirimPesan();
+        }
       }
 
       isKlikAudio = 1;
