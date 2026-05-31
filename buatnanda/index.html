@@ -43,15 +43,15 @@
       // Jika ingin menambahkan ucapan ikuti seperti contoh
       konten = [
         {
-          gambar: "File gambar",
+          gambar: "",
           ucapan: "allo sayangku ♥️♥️",
         },
         {
-          gambar: "File gambar",
+          gambar: "",
           ucapan: "tetep di versi terbaik kita ya 😄,entah bertemu atau tidak ,tapi aku seneng bisa ketemu kamu bubb ♥️",
         },
         {
-          gambar: "File gambar",
+          gambar: "",
           ucapan: "good night ya bubb mimpi indah ♥️,love you more ♥️♥️♥️♥️😆",
         },
       ];
@@ -65,10 +65,10 @@
         var { value: pesan } = await swalo.fire({ title: "Tulis pesan", input: "textarea", confirmButtonText: "Kirim" });
         klikA.play();
         if (pesan) {
-          await swalo.fire({ title: "Kirim pesannya ke wa aku ya" });
+          await swalo.fire({ title: "Kirim pesannya ke wa aku ya bubb 😆♥️" });
           location.assign(`https://wa.me/${nomorWhatsapp}?text=${pesan}`);
         } else {
-          await swalo.fire({ title: "Jangan dikosongin ya :)" });
+          await swalo.fire({ title: "Jangan dikosongin ya 😆♥️" });
           kirimPesan();
         }
       }
